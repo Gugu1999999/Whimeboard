@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ee;
+    color: #292b28;
+}
+
+header {
+    background-color: #252821;
+    color: #f5f3ee;
+    padding: 28px 8%;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #c9cbbf;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.introducao {
+    margin-bottom: 36px;
+}
+
+.introducao h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    color: #686b63;
+    line-height: 1.6;
+}
+
+.galeria {
+    background-color: #ffffff;
+    padding: 28px;
+    border: 1px solid #e5e2d9;
+    border-radius: 16px;
+}
+
+.galeria h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.galeria p {
+    color: #777a71;
+}
+
+
+.lista-estudos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.cartao-estudo {
+    overflow: hidden;
+    border: 1px solid #e5e2d9;
+    border-radius: 14px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-estudo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.imagem-estudo {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eae7de;
+}
+
+.imagem-estudo span {
+    font-size: 42px;
+}
+
+.informacoes-estudo {
+    padding: 18px;
+}
+
+.informacoes-estudo h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.informacoes-estudo p {
+    color: #686b63;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.data-estudo {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #f1f0e9;
+    color: #55584f;
+    font-size: 12px;
+}
+
+
+#adicionar-estudo {
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #34382e;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#adicionar-estudo:hover {
+    background-color: #4b5141;
+}
+
+.imagem-estudo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.capa-album {
+    background-color: #e8e6dc;
+}
+
+.cartao-estudo[role="button"] {
+    cursor: pointer;
+}
+
+.cartao-estudo[role="button"]:focus-visible {
+    outline: 3px solid #747b62;
+    outline-offset: 4px;
+}
+
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #515844;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+
+#form-album {
+    max-width: 420px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e5e2d9;
+    border-radius: 12px;
+}
+
+#form-album label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#form-album input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5d3ca;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+#form-album button {
+    margin-top: 18px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: #34382e;
+    color: white;
+    cursor: pointer;
+}
+
+#form-album button:hover {
+    background-color: #4b5141;
+}
+
+.cabecalho-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#form-estudo {
+    display: grid;
+    gap: 10px;
+    margin: 24px 0;
+    padding: 22px;
+    background-color: #f8f7f3;
+    border: 1px solid #e5e2d9;
+    border-radius: 12px;
+}
+
+#form-estudo[hidden] {
+    display: none;
+}
+
+#form-estudo label {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#form-estudo input,
+#form-estudo textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5d3ca;
+    border-radius: 7px;
+    background-color: white;
+    font: inherit;
+}
+
+#form-estudo textarea {
+    resize: vertical;
+}
+
+#form-estudo button,
+#adicionar-estudo {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    background-color: #34382e;
+    color: white;
+    cursor: pointer;
+}
+
+#form-estudo button:hover,
+#adicionar-estudo:hover {
+    background-color: #4b5141;
+}
+
+.cartao-estudo .anotacoes-estudo {
+    margin-top: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.cartao-estudo .foto-salva {
+    width: 100%;
+    height: 190px;
+    display: block;
+    object-fit: cover;
+}

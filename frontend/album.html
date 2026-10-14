@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum | Whimeboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script src="js/album.js"></script>
+
+<body>
+    <header>
+        <h1>Whimeboard</h1>
+        <p>Suas ideias, seus estudos, sua evolução.</p>
+    </header>
+
+    <main>
+        <a href="index.html" class="voltar">← Meus álbuns</a>
+
+        <section class="introducao">
+            <h2 id="titulo-album">Meu álbum</h2>
+            <p id="descricao-album">Organize suas fotos e anotações de estudo.</p>
+        </section>
+
+        
+        <section class="galeria">
+            <div class="cabecalho-galeria">
+                <h2>Meus estudos</h2>
+                <button id="adicionar-estudo">+ Adicionar estudo</button>
+            </div>
+
+            <form id="form-estudo" hidden>
+                <label for="titulo-estudo">Título do estudo</label>
+                <input
+                    type="text"
+                    id="titulo-estudo"
+                    placeholder="Ex.: Função quadrática"
+                    required
+                >
+
+                <label for="assunto-estudo">Assunto</label>
+                <input
+                    type="text"
+                    id="assunto-estudo"
+                    placeholder="Ex.: Raízes e vértice"
+                    required
+                >
+
+                <label for="foto-estudo">Foto do quadro</label>
+                <input
+                    type="file"
+                    id="foto-estudo"
+                    accept="image/*"
+                    required
+                >
+
+                <label for="anotacoes-estudo">Anotações</label>
+                <textarea
+                    id="anotacoes-estudo"
+                    placeholder="O que você aprendeu neste estudo?"
+                    rows="4"
+                ></textarea>
+
+                <button type="submit">Salvar estudo</button>
+            </form>
+
+            <div id="lista-estudos" class="lista-estudos">
+                <p id="mensagem-vazia">Você ainda não adicionou estudos neste álbum.</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

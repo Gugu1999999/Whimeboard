@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimeboard | Meu espaço de estudos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Whimeboard</h1>
+        <p>Suas ideias, seus estudos, sua evolução.</p>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Meus álbuns de estudo</h2>
+            <p>Organize suas ideias, registre seu aprendizado e acompanhe sua evolução.</p>
+
+            <button id="adicionar-estudo">+ Criar álbum</button>
+            
+            <form id="form-album" hidden>
+                <label for="nome-album">Nome do álbum</label>
+                <input
+                    type="text"
+                    id="nome-album"
+                    placeholder="Ex.: Física"
+                    required
+                >
+
+                <label for="descricao-novo-album">Descrição</label>
+                <input
+                    type="text"
+                    id="descricao-novo-album"
+                    placeholder="Ex.: Movimento e energia"
+                    required
+                >
+
+                <button type="submit">Salvar álbum</button>
+            </form>
+
+        </section>
+
+        
+        <section class="galeria">
+            <h2>Meus álbuns</h2>
+
+            <div class="lista-estudos">
+                <article class="cartao-estudo" tabindex="0" role="button">
+                    <div class="imagem-estudo capa-album">
+                        <span>📐</span>
+                    </div>
+
+                    <div class="informacoes-estudo">
+                        <h3>Matemática</h3>
+                        <p>Funções, geometria e álgebra</p>
+                        <span class="data-estudo">Meu álbum de estudos</span>
+                    </div>
+                </article>
+
+                <article class="cartao-estudo" tabindex="0" role="button">
+                    <div class="imagem-estudo capa-album">
+                        <span>🧪</span>
+                    </div>
+
+                    <div class="informacoes-estudo">
+                        <h3>Química</h3>
+                        <p>Reações, isomeria e ligações</p>
+                        <span class="data-estudo">Meu álbum de estudos</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
